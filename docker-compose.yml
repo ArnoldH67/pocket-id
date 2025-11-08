@@ -2,11 +2,11 @@ services:
   pocket-id:
     image: ghcr.io/pocket-id/pocket-id:v1
     restart: unless-stopped
-    env_file: .env
+    #env_file: .env
     ports:
-      - 1411:1411
+      - 192.168.3.100:1411:1411
     volumes:
-      - "./data:/app/data"
+      - /volume2/docker/pocket-id/data:/app/data"
     # Optional healthcheck
     healthcheck:
       test: [ "CMD", "/app/pocket-id", "healthcheck" ]
