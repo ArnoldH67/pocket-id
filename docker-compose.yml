@@ -2,7 +2,7 @@ services:
   pocket-id:
     image: ghcr.io/pocket-id/pocket-id:v1
     container_name: Pocket-ID
-    #env_file: .env
+    env_file: .env
     ports:
       - 192.168.3.100:1411:1411
     volumes:
